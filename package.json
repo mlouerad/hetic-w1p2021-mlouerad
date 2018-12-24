@@ -1,0 +1,25 @@
+{
+  "name": "hetic-w1p2021-mlouerad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlouerad/hetic-w1p2021-mlouerad.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mlouerad/hetic-w1p2021-mlouerad/issues"
+  },
+  "homepage": "https://github.com/mlouerad/hetic-w1p2021-mlouerad#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0",
+    "sass": "^1.15.2"
+  }
+}

@@ -1,0 +1,128 @@
+$main-color:#101010;
+
+
+
+.header{
+display:grid;
+grid-template-columns: auto 40px;
+padding: 2em;
+background-color: white;
+position: sticky;
+top: 0;
+z-index: 2;
+
+  .header__logo{
+    text-decoration: none;
+    font-family: "space mono", sans-serif;
+    font-weight: bold;
+    color:$main-color;
+  }
+  .header__container__burgerPiece{
+    height: 3px;
+    width: 25px;
+    display: block ;
+    background-color: $main-color ;
+    
+    }
+    .header__container__burgerPiece:not(:nth-child(1)){
+    margin-top: 3px;
+    }
+  }
+
+.main{
+  position: relative;
+  .main__presentation{
+    font-size: 24px;
+    margin-top: 80px;
+    margin-left: 30px;
+
+    .main__presentation__name{
+      font-family:"prata";
+    }
+
+    .main__presentation__student{
+      margin-top: 10px;
+      font-family: "space mono", sans-serif;
+    }
+  }
+  .main__image1{
+    height: 270px;
+    width: 200px;
+    background:url("../../assets/foret.png") no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -20px;
+    z-index: -1;
+    
+  }
+  .main__image2{
+    height: 220px;
+    width: 120px;
+    background:url("../../assets/japon.png") no-repeat;
+    background-size: cover;
+    position: relative;
+    left: 30%;
+    top:-40px;
+    z-index: -2;
+
+  }
+  .main__image3{
+    height: 200px;
+    width: 130px;
+    background:url("../../assets/sculture.png") no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: 20%;
+    z-index: -1;
+  }
+  .main__about{
+    text-align: center;
+    padding: 40px;
+    .main__about__skills{
+      margin-bottom: 40px;
+    }
+    .main__about__skills__title{
+      font-family: "prata", serif;
+      font-size: 12px;
+      margin-bottom: 40px;
+      color: $main-color;
+
+    }
+    .main__about__skills__text{
+      font-family: "space mono",sans-serif;
+      font-size:24px;
+      color: $main-color;
+    }
+    .main__about__bio__title{
+      font-family: "prata", serif;
+      font-size:12px;
+      margin-bottom: 40px;
+      color: $main-color;
+    }
+    .main__about__bio__text{
+      font-family: "space mono",sans-serif;
+      font-size: 16px;
+      text-align: left;
+      color: $main-color;
+    }
+  }
+}
+
+.footer{
+  width: 100%;
+  height: 30vh;
+  background-color: $main-color;
+}
+
+
+  
+
+
+  
+
+
+
+
+  
+
