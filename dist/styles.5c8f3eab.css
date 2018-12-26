@@ -46,27 +46,59 @@ table {
 
 .header {
   display: grid;
-  grid-template-columns: auto 40px;
+  grid-template-columns: auto 25px;
   padding: 2em;
-  background-color: white;
   position: sticky;
   top: 0;
   z-index: 2;
+  transition-duration: 0.3s;
+}
+.header .header__menuOpen {
+  height: 100vh;
+  width: 50vw;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+.header .header__menuOpen .header__menuOpen__cross {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  right: 2em;
+  top: 2em;
+  background: url("cross_black.172bfcd9.svg");
+  transform: translateX(100px);
+}
+.header .header__menuOpen .header__menuOpen__ul {
+  display: block;
+  padding: 60px;
+}
+.header .header__menuOpen .header__menuOpen__ul .header__menuOpen__ul__li {
+  font-family: "space mono", sans-serif;
+  font-size: 16px;
+  color: #101010;
+  margin-top: 40px;
+  opacity: 0;
 }
 .header .header__logo {
   text-decoration: none;
   font-family: "space mono", sans-serif;
   font-weight: bold;
   color: #101010;
+  transition-duration: 0.4s;
 }
 .header .header__container__burgerPiece {
-  height: 3px;
+  height: 2px;
   width: 25px;
   display: block;
   background-color: #101010;
+  transition-duration: 0.4s;
 }
 .header .header__container__burgerPiece:not(:nth-child(1)) {
-  margin-top: 3px;
+  margin-top: 4px;
 }
 
 .main {
@@ -87,7 +119,7 @@ table {
 .main .main__image1 {
   height: 270px;
   width: 200px;
-  background: url("foret.15d63baa.png") no-repeat;
+  background: url("foret.3b3ae8b6.png") no-repeat;
   background-size: cover;
   position: relative;
   top: -20px;
@@ -96,7 +128,7 @@ table {
 .main .main__image2 {
   height: 220px;
   width: 120px;
-  background: url("japon.10aa95ca.png") no-repeat;
+  background: url("japon.d50e1d7a.png") no-repeat;
   background-size: cover;
   position: relative;
   left: 30%;
@@ -106,7 +138,7 @@ table {
 .main .main__image3 {
   height: 200px;
   width: 130px;
-  background: url("sculture.776531d9.png") no-repeat;
+  background: url("sculture.fbfbb0e8.png") no-repeat;
   background-size: cover;
   position: absolute;
   right: 0;
@@ -148,4 +180,45 @@ table {
   width: 100%;
   height: 30vh;
   background-color: #101010;
+}
+
+.black {
+  background-color: #101010 !important;
+}
+
+.white {
+  background: white !important;
+}
+
+.white__logo {
+  color: white !important;
+}
+
+.white__cross {
+  background: url("cross.d4ffee38.png") !important;
+}
+
+.overlay {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0%;
+  background-color: white;
+  z-index: 2;
+}
+.overlay .overlay__h1 {
+  width: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "space mono";
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: solid black 1px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
 }

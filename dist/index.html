@@ -6,6 +6,26 @@
     <title>Louerad Mounir</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles.5c8f3eab.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script>$(window).on('scroll', function () {
+  if ($(window).scrollTop()) {
+    $('.header').addClass('black');
+    $('.header__menuOpen').addClass('black');
+    $('.header__container__burgerPiece').addClass('white');
+    $('.header__logo').addClass('white__logo');
+    $('.header__menuOpen__ul__li').addClass('white__logo');
+    $('.header__menuOpen__cross').addClass('white__cross');
+  } else {
+    $('.header').removeClass('black');
+    $('.header__menuOpen').removeClass('black');
+    $('.header__container__burgerPiece').removeClass('white');
+    $('.header__logo').removeClass('white__logo');
+    $('.header__menuOpen__ul__li').removeClass('white__logo');
+    $('.header__menuOpen__cross').removeClass('white__cross');
+  }
+});</script>
+    <script defer="" src="/script.d573be0b.js"></script>
   <script src="/styles.5c8f3eab.js"></script></head>
   <body>
     <header class="header">
@@ -14,6 +34,14 @@
         <nav class="header__container__burgerPiece"></nav>
         <nav class="header__container__burgerPiece"></nav>
         <nav class="header__container__burgerPiece"></nav>
+      </div>
+      <div class="header__menuOpen">
+        <div class="header__menuOpen__cross"></div>
+        <ul class="header__menuOpen__ul">
+          <li class="header__menuOpen__ul__li">About</li>
+          <li class="header__menuOpen__ul__li">projects</li>
+          <li class="header__menuOpen__ul__li">Contact</li>
+        </ul>
       </div>
     </header>
     <main class="main">
@@ -42,6 +70,10 @@
       </div>
 
     </main>
+    <div class="overlay">
+      <h1 class="overlay__h1">découvre mon histoire</h1>
+    </div>
+
     <footer class="footer">
 
     </footer>

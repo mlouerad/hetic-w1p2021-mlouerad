@@ -104,79 +104,52 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"scss/styles.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\assets\\cross_black.svg":[["cross_black.172bfcd9.svg","assets/cross_black.svg"],"assets/cross_black.svg"],"./..\\assets\\foret.png":[["foret.3b3ae8b6.png","assets/foret.png"],"assets/foret.png"],"./..\\assets\\japon.png":[["japon.d50e1d7a.png","assets/japon.png"],"assets/japon.png"],"./..\\assets\\sculture.png":[["sculture.fbfbb0e8.png","assets/sculture.png"],"assets/sculture.png"],"./..\\assets\\cross.png":[["cross.d4ffee38.png","assets/cross.png"],"assets/cross.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})({"js/script.js":[function(require,module,exports) {
+document.querySelector('.overlay__h1').addEventListener('click', function () {
+  TweenMax.to('.overlay__h1', 0.5, {
+    opacity: 0,
+    y: '-60',
+    ease: Power1.easeOut
+  });
+  TweenMax.to('.overlay', 2, {
+    delay: 1.5,
+    y: '-100%',
+    ease: Power1.easeOut
+  });
+});
+document.querySelector(".header__container").addEventListener('click', function () {
+  TweenMax.to('.header__menuOpen', 0.5, {
+    scaleX: 1,
+    ease: Power1.easeOut
+  });
+  TweenMax.to('.header__menuOpen__ul__li', 1.2, {
+    delay: 0.5,
+    opacity: 1,
+    ease: Power1.easeOut
+  });
+  TweenMax.to(".header__menuOpen__cross", 1.2, {
+    delay: 0.5,
+    x: '-10px',
+    ease: Power1.easeOut
+  });
+});
+document.querySelector(".header__menuOpen__cross").addEventListener('click', function () {
+  TweenMax.to('.header__menuOpen__ul__li', 0.1, {
+    opacity: 0,
+    ease: Power1.easeOut
+  });
+  TweenMax.to(".header__menuOpen__cross", 0.1, {
+    delay: 0.1,
+    x: '100px',
+    ease: Power1.easeOut
+  });
+  TweenMax.to('.header__menuOpen', 0.5, {
+    delay: 0.1,
+    scaleX: 0,
+    ease: Power1.easeOut
+  });
+});
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -345,4 +318,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/script.js"], null)
+//# sourceMappingURL=/script.d573be0b.map
