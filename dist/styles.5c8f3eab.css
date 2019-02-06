@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css?family=Prata|Space+Mono");
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -44,183 +44,308 @@ table {
   border-spacing: 0;
 }
 
-.header {
+* {
+  box-sizing: border-box;
+}
+
+@keyframes reveal {
+  0% {
+    left: 0;
+    width: 0%;
+  }
+  50% {
+    left: 0%;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.header-home {
+  font-family: "Abril Fatface";
   display: grid;
-  grid-template-columns: auto 25px;
-  padding: 2em;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  transition-duration: 0.3s;
-}
-.header .header__menuOpen {
-  height: 100vh;
-  width: 50vw;
-  background-color: white;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: scaleX(0);
-  transform-origin: right;
-  z-index: 2;
-}
-.header .header__menuOpen .header__menuOpen__cross {
-  height: 15px;
-  width: 15px;
-  position: absolute;
-  right: 2em;
-  top: 2em;
-  background: url("cross_black.172bfcd9.svg");
-  transform: translateX(100px);
-}
-.header .header__menuOpen .header__menuOpen__ul {
-  display: block;
-  padding: 60px;
-}
-.header .header__menuOpen .header__menuOpen__ul .header__menuOpen__ul__li {
-  font-family: "space mono", sans-serif;
-  font-size: 16px;
-  color: #101010;
-  margin-top: 40px;
+  grid-template-columns: 40px auto;
+  padding: 20px 100px 20px 100px;
   opacity: 0;
 }
-.header .header__logo {
+.header-home a {
   text-decoration: none;
-  font-family: "space mono", sans-serif;
-  font-weight: bold;
+  font-size: 2em;
   color: #101010;
-  transition-duration: 0.4s;
 }
-.header .header__container__burgerPiece {
-  height: 2px;
-  width: 25px;
-  display: block;
-  background-color: #101010;
-  transition-duration: 0.4s;
+.header-home .header-home__projects {
+  cursor: pointer;
 }
-.header .header__container__burgerPiece:not(:nth-child(1)) {
-  margin-top: 4px;
+.header-home nav {
+  text-align: right;
 }
-
-.main {
-  position: relative;
+.header-home nav a {
+  margin-right: 40px;
+  font-size: 1.2em;
 }
-.main .main__presentation {
-  font-size: 24px;
-  margin-top: 80px;
-  margin-left: 30px;
-}
-.main .main__presentation .main__presentation__name {
-  font-family: "prata";
-}
-.main .main__presentation .main__presentation__student {
-  margin-top: 10px;
-  font-family: "space mono", sans-serif;
-}
-.main .main__image1 {
-  height: 270px;
-  width: 200px;
-  background: url("foret.3b3ae8b6.png") no-repeat;
-  background-size: cover;
-  position: relative;
-  top: -20px;
-  z-index: -1;
-}
-.main .main__image2 {
-  height: 220px;
-  width: 120px;
-  background: url("japon.d50e1d7a.png") no-repeat;
-  background-size: cover;
-  position: relative;
-  left: 30%;
-  top: -40px;
-  z-index: -2;
-}
-.main .main__image3 {
-  height: 200px;
-  width: 130px;
-  background: url("sculture.fbfbb0e8.png") no-repeat;
-  background-size: cover;
+.header-home nav a:before {
+  content: "";
   position: absolute;
-  right: 0;
-  top: 20%;
-  z-index: -1;
-}
-.main .main__about {
-  text-align: center;
-  padding: 40px;
-}
-.main .main__about .main__about__skills {
-  margin-bottom: 40px;
-}
-.main .main__about .main__about__skills__title {
-  font-family: "prata", serif;
-  font-size: 12px;
-  margin-bottom: 40px;
-  color: #101010;
-}
-.main .main__about .main__about__skills__text {
-  font-family: "space mono", sans-serif;
-  font-size: 24px;
-  color: #101010;
-}
-.main .main__about .main__about__bio__title {
-  font-family: "prata", serif;
-  font-size: 12px;
-  margin-bottom: 40px;
-  color: #101010;
-}
-.main .main__about .main__about__bio__text {
-  font-family: "space mono", sans-serif;
-  font-size: 16px;
-  text-align: left;
-  color: #101010;
-}
-
-.footer {
-  width: 100%;
-  height: 20vh;
-  background-color: #101010;
-}
-
-.black {
-  background-color: #101010 !important;
-}
-
-.white {
-  background: white !important;
-}
-
-.white__logo {
-  color: white !important;
-}
-
-.white__cross {
-  background: url("cross.d4ffee38.png") !important;
-}
-
-.overlay {
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  bottom: 0%;
+  top: 0;
+  left: 0;
+  right: 100%;
   background-color: black;
-  z-index: 2;
+  height: 2px;
+  transition-property: right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
-.overlay .overlay__h1 {
-  width: 250px;
+.header-home nav a:hover:before {
+  right: 0;
+}
+
+.main-home {
+  font-family: "Archivo black";
+}
+.main-home p:nth-of-type(1) {
+  position: absolute;
+  font-size: 5em;
+  text-transform: uppercase;
+  top: 20%;
+  left: 10%;
+  opacity: 0;
+}
+.main-home .main-home__container {
+  width: 400px;
+  height: 500px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: "space mono";
-  font-size: 10px;
-  font-weight: bold;
-  letter-spacing: 4px;
+  z-index: -1;
+}
+.main-home .main-home__container__picture {
+  background: url("me.f1a96e23.png") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0;
+}
+.main-home .main-home__container__picture:hover {
+  animation: loop 1s forwards;
+}
+.main-home .main-home__container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #fff34a;
+  animation: reveal cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-duration: 2s;
+}
+.main-home p:nth-of-type(2) {
+  position: absolute;
+  font-size: 4em;
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: #101010;
+  color: transparent;
+  right: 15%;
+  bottom: 15%;
   text-transform: uppercase;
-  border: solid white 1px;
-  padding: 20px;
+  opacity: 0;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #fff34a;
+  z-index: 2;
+  transform-origin: right;
+  transform: scaleX(0);
+}
+.menu ul {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
   text-align: center;
+}
+.menu ul li a {
+  text-decoration: none;
+  font-family: "Archivo black";
+  overflow: hidden;
+  font-size: 7em;
+  color: #101010;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+.menu__header {
+  font-family: "Abril Fatface";
+  display: grid;
+  grid-template-columns: 40px auto;
+  padding: 20px 100px 20px 100px;
+}
+.menu__header a {
+  text-decoration: none;
+  font-size: 2em;
+  color: #101010;
+  opacity: 0;
   cursor: pointer;
+}
+.menu__header nav {
+  text-align: right;
+}
+.menu__header nav a {
+  margin-right: 40px;
+  font-size: 1.2em;
+}
+.menu__header nav .menu__header__projects {
+  text-decoration: underline;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("montserrat-v12-latin-regular.d79f7735.woff") format("woff"), url("montserrat-v12-latin-regular.660348f5.woff2") format("woff2");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("Montserrat-Bold.91aa0c63.woff") format("woff");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Archivo black";
+  src: url("archivo-black-v8-latin-regular.4fd68c44.woff") format("woff"), url("archivo-black-v8-latin-regular.099b3d3e.woff2") format("woff2");
+}
+.body-about {
+  background-color: #131313;
   color: white;
+  height: 350vh;
+}
+
+.header-about {
+  font-family: "Abril Fatface";
+  display: grid;
+  grid-template-columns: 40px auto;
+  padding: 20px 100px 20px 100px;
+}
+.header-about .header-home__projects {
+  cursor: pointer;
+}
+.header-about a {
+  text-decoration: none;
+  font-size: 2em;
+  color: white;
+}
+.header-about a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 100%;
+  width: 0;
+  background-color: black;
+  height: 2px;
+  transition-property: right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.header-about a:hover:before {
+  width: 100%;
+}
+.header-about nav {
+  text-align: right;
+}
+.header-about nav a {
+  margin-right: 40px;
+  font-size: 1.2em;
+}
+
+.main-about {
+  font-family: "Montserrat";
+  margin: 150px auto;
+  width: 70%;
+}
+.main-about a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.main-about .main-about__name {
+  font-family: "Archivo black";
+  font-size: 96px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.main-about .main-about__name-lastname {
+  -webkit-text-stroke: 3px;
+  -webkit-text-stroke-color: white;
+  color: transparent;
+}
+.main-about .main-about__mainContent {
+  font-size: 33px;
+  line-height: 125%;
+}
+.main-about .main-about__mainContent .main-about__mainContent__explain {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 1rem;
+}
+.main-about .main-about__mainContent p:not(:first-child) {
+  font-size: 1.2em;
+  line-height: 125%;
+}
+.main-about .main-about__contact {
+  display: flex;
+  margin-top: 100px;
+}
+.main-about .main-about__contact h1 {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.main-about .main-about__contact .main-about__contact__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 100px;
+}
+.main-about .main-about__contact .main-about__contact__info .main-about__contact__info__piece {
+  justify-content: space-between;
+}
+.main-about .main-about__contact .main-about__contact__info .main-about__contact__info__piece .main-about__contact__info__piece__logo {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.main-about .main-about__contact .main-about__contact__quote p {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.main-about .main-about__contact .main-about__contact__quote button {
+  padding: 1em 1.5em;
+  color: #131313;
+  background-color: white;
+  font-weight: bold;
+  font-family: "Montserrat";
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
 }

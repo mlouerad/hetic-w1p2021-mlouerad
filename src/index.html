@@ -5,84 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Louerad Mounir</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Portpholio de Louerad Mounir" content="Portpholio,web design,Louerad Mounir">
     <link rel="stylesheet" href="./scss/styles.scss">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-    <script>
-    
-    $(window).on('scroll',function(){
-      if($(window).scrollTop()){
-        $('.header').addClass('black');
-        $('.header__menuOpen').addClass('black');
-        $('.header__container__burgerPiece').addClass('white');
-        $('.header__logo').addClass('white__logo');
-        $('.header__menuOpen__ul__li').addClass('white__logo');
-        $('.header__menuOpen__cross').addClass('white__cross');
-
-      }
-      else
-      {
-        $('.header').removeClass('black');
-        $('.header__menuOpen').removeClass('black');
-        $('.header__container__burgerPiece').removeClass('white');
-        $('.header__logo').removeClass('white__logo');
-        $('.header__menuOpen__ul__li').removeClass('white__logo');
-        $('.header__menuOpen__cross').removeClass('white__cross');
-      }
-    });
-
-    </script>
+    <script src="./js/vendor/barba.min.js" type="text/javascript"> </script>
     <script defer src="./js/script.js"></script>
   </head>
-  <body>
-    <header class="header">
-      <a class="header__logo" href="" >M.</a>
-      <div class="header__container">
-        <nav class="header__container__burgerPiece"></nav>
-        <nav class="header__container__burgerPiece"></nav>
-        <nav class="header__container__burgerPiece"></nav>
-      </div>
-      <div class="header__menuOpen">
-        <div class="header__menuOpen__cross"></div>
-        <ul class="header__menuOpen__ul">
-          <li class="header__menuOpen__ul__li">About</li>
-          <li class="header__menuOpen__ul__li">projects</li>
-          <li class="header__menuOpen__ul__li">Contact</li>
-        </ul>
-      </div>
+  <body class="body-home">
+    <header class="header-home">
+      <a class="header-home__logo" href="./index.html">ml</a>
+      <nav>
+        <a href="./about.html">about</a>
+        <a class="header-home__projects">projects</a>
+      </nav>
     </header>
-    <main class="main">
-      <div class="main__presentation">
-        <p class="main__presentation__name">Mounir LOUERAD</p>
-        <p class="main__presentation__student">Etudiant à HETIC</p>
+    <main class="main-home">
+      <p class="main-home__name">
+        louerad <br> mounir
+      </p>
+      <div class="main-home__container">
+        <div class="main-home__container__picture"></div>
       </div>
-      <div class="main__image1"></div>
-      <div class="main__image2"></div>
-      <div class="main__image3"></div>
-      <div class="main__about">
-        <div class="main__about__skills">
-          <p class="main__about__skills__title">skills</p>
-          <ul class="main__about__skills__text">
-            <li >Css</li>
-            <li >Html</li>
-            <li >Java Script</li>
-            <li >Figma</li>
-            <li >Illustrator</li>
-          </ul>
-        </div>
-        <div class="main__about__bio">
-          <p class="main__about__bio__title">Quelque mots</p>
-          <p class="main__about__bio__text">J’ai 19 ans et je suis actuellement étudiant à HETIC. Je recherche un stage de Juin 2018 à Aout 2018 dans le domaine du web.</p>
-        </div>
-      </div>
-
+      
+      <p class="main-home__job">french <br>web <br>designer</p>
     </main>
-    <div class="overlay">
-      <h1 class="overlay__h1">découvre mon histoire</h1>
-    </div>
-
-    <footer class="footer">
-
-    </footer>
   </body>
+  <div class="menu">
+      <div class="menu__header">
+        <a class="menu__header__logo" href="./index.html">ml</a>
+        <nav>
+          <a class="menu__header__about" href="./about.html">about</a>
+          <a class="menu__header__projects">close</a>
+        </nav>
+      </div>
+    <ul>
+      <li ><a class="menu__project1" href="">nespresso</a></li>
+      <li ><a class="menu__project2" href="">so'comptoir</a></li>
+    </ul>
+  </div>
 </html>

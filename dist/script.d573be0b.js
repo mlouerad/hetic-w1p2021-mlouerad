@@ -105,48 +105,87 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   // Override the current require with this new one
   return newRequire;
 })({"js/script.js":[function(require,module,exports) {
-document.querySelector('.overlay__h1').addEventListener('click', function () {
-  TweenMax.to('.overlay__h1', 0.5, {
-    opacity: 0,
-    y: '-60',
-    ease: Power1.easeOut
-  });
-  TweenMax.to('.overlay', 2, {
-    delay: 1.5,
-    y: '-100%',
-    ease: Power1.easeOut
-  });
+TweenMax.to('.main-home__container__picture', 0.0001, {
+  opacity: 1,
+  ease: Power4.easeOut,
+  delay: 1
 });
-document.querySelector(".header__container").addEventListener('click', function () {
-  TweenMax.to('.header__menuOpen', 0.5, {
+TweenMax.to('.main-home__name', 1.5, {
+  opacity: 1,
+  y: "20",
+  ease: Power4.easeOut,
+  delay: 1.2
+});
+TweenMax.to('.main-home__job', 1, {
+  opacity: 1,
+  y: "20",
+  ease: Power4.easeOut,
+  delay: 1.5
+});
+TweenMax.to('.header-home', 1, {
+  opacity: 1,
+  ease: Power4.easeOut,
+  delay: 1.7
+});
+document.querySelector('.header-home__projects').addEventListener('click', function () {
+  TweenMax.to('.menu', 1, {
     scaleX: 1,
-    ease: Power1.easeOut
+    ease: Power4.easeOut
   });
-  TweenMax.to('.header__menuOpen__ul__li', 1.2, {
-    delay: 0.5,
+  TweenMax.to('.menu__project1', 1, {
     opacity: 1,
-    ease: Power1.easeOut
+    ease: Power4.easeOut,
+    delay: 1
   });
-  TweenMax.to(".header__menuOpen__cross", 1.2, {
-    delay: 0.5,
-    x: '-10px',
-    ease: Power1.easeOut
+  TweenMax.to('.menu__project2', 1, {
+    opacity: 1,
+    ease: Power4.easeOut,
+    delay: 1.2
+  });
+  TweenMax.to('.menu__header__logo', 1, {
+    opacity: 1,
+    ease: Power4.easeOut,
+    delay: 1.3
+  });
+  TweenMax.to('.menu__header__about', 1, {
+    opacity: 1,
+    y: "40",
+    ease: Power4.easeOut,
+    delay: 1.4
+  });
+  TweenMax.to('.menu__header__projects', 1, {
+    opacity: 1,
+    y: "40",
+    ease: Power4.easeOut,
+    delay: 1.5
   });
 });
-document.querySelector(".header__menuOpen__cross").addEventListener('click', function () {
-  TweenMax.to('.header__menuOpen__ul__li', 0.1, {
+document.querySelector('.menu__header__projects').addEventListener('click', function () {
+  TweenMax.to('.menu__project1', 0.1, {
     opacity: 0,
-    ease: Power1.easeOut
+    ease: Power4.easeOut
   });
-  TweenMax.to(".header__menuOpen__cross", 0.1, {
-    delay: 0.1,
-    x: '100px',
-    ease: Power1.easeOut
+  TweenMax.to('.menu__project2', 0.1, {
+    opacity: 0,
+    ease: Power4.easeOut
   });
-  TweenMax.to('.header__menuOpen', 0.5, {
-    delay: 0.1,
+  TweenMax.to('.menu__header__logo', 0.1, {
+    opacity: 0,
+    ease: Power4.easeOut
+  });
+  TweenMax.to('.menu__header__about', 0.1, {
+    y: "-40px",
+    opacity: 0,
+    ease: Power4.easeOut
+  });
+  TweenMax.to('.menu__header__projects', 0.1, {
+    y: "-40px",
+    opacity: 0,
+    ease: Power4.easeOut
+  });
+  TweenMax.to('.menu', 0.5, {
     scaleX: 0,
-    ease: Power1.easeOut
+    ease: Power4.easeOut
   });
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -176,7 +215,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50460" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50464" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

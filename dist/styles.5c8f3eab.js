@@ -176,7 +176,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\assets\\cross_black.svg":[["cross_black.172bfcd9.svg","assets/cross_black.svg"],"assets/cross_black.svg"],"./..\\assets\\foret.png":[["foret.3b3ae8b6.png","assets/foret.png"],"assets/foret.png"],"./..\\assets\\japon.png":[["japon.d50e1d7a.png","assets/japon.png"],"assets/japon.png"],"./..\\assets\\sculture.png":[["sculture.fbfbb0e8.png","assets/sculture.png"],"assets/sculture.png"],"./..\\assets\\cross.png":[["cross.d4ffee38.png","assets/cross.png"],"assets/cross.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\assets\\image\\me.png":[["me.f1a96e23.png","assets/image/me.png"],"assets/image/me.png"],"./..\\assets\\fonts\\montserrat-v12-latin-regular.woff":[["montserrat-v12-latin-regular.d79f7735.woff","assets/fonts/montserrat-v12-latin-regular.woff"],"assets/fonts/montserrat-v12-latin-regular.woff"],"./..\\assets\\fonts\\montserrat-v12-latin-regular.woff2":[["montserrat-v12-latin-regular.660348f5.woff2","assets/fonts/montserrat-v12-latin-regular.woff2"],"assets/fonts/montserrat-v12-latin-regular.woff2"],"./..\\assets\\fonts\\Montserrat-Bold.woff":[["Montserrat-Bold.91aa0c63.woff","assets/fonts/Montserrat-Bold.woff"],"assets/fonts/Montserrat-Bold.woff"],"./..\\assets\\fonts\\archivo-black-v8-latin-regular.woff":[["archivo-black-v8-latin-regular.4fd68c44.woff","assets/fonts/archivo-black-v8-latin-regular.woff"],"assets/fonts/archivo-black-v8-latin-regular.woff"],"./..\\assets\\fonts\\archivo-black-v8-latin-regular.woff2":[["archivo-black-v8-latin-regular.099b3d3e.woff2","assets/fonts/archivo-black-v8-latin-regular.woff2"],"assets/fonts/archivo-black-v8-latin-regular.woff2"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -203,7 +203,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50460" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50464" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

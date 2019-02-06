@@ -1,1 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Prata|Space+Mono');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+@font-face{
+  font-family: "Montserrat";
+  src: url("../assets/fonts/montserrat-v12-latin-regular.woff") format("woff"),url("../assets/fonts/montserrat-v12-latin-regular.woff2") format("woff2");
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face{
+  font-family: "Archivo black";
+  src: url("../assets/fonts/archivo-black-v8-latin-regular.woff") format("woff"),url("../assets/fonts/archivo-black-v8-latin-regular.woff2") format("woff2");
+}
+

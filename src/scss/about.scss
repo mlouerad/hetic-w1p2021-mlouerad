@@ -1,0 +1,126 @@
+.body-about{
+  background-color:#131313;
+  color :white;
+  height: 350vh;
+}
+
+.header-about{
+  font-family: "Abril Fatface";
+  display:grid;
+  grid-template-columns: 40px auto;
+  padding: 20px 100px  20px 100px ;
+  .header-home__projects{
+    cursor: pointer;
+  }  
+  a{
+    text-decoration: none;
+    font-size: 2em;
+    color: white;
+  }
+  a:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    width: 0;
+    background-color:black;
+    height: 2px;
+    transition-property: right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    }
+  a:hover:before{
+    width: 100%;
+    }
+  
+  nav{
+    text-align: right;
+    a{
+      margin-right: 40px;
+      font-size: 1.2em;
+    }
+  }
+
+}
+.main-about{
+  font-family: "Montserrat";
+  margin: 150px auto;
+  width: 70%;
+  
+  a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .main-about__name  {
+    font-family: "Archivo black";
+    font-size:96px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .main-about__name-lastname{
+    -webkit-text-stroke: 3px;
+    -webkit-text-stroke-color: white;
+    color:transparent;
+  }
+  .main-about__mainContent{
+    font-size:33px;
+    line-height: 125%;
+    .main-about__mainContent__explain{
+      margin-top: 2em;
+      margin-bottom: 2em;
+      font-size: 1rem;
+    }
+  }
+  
+  .main-about__mainContent p:not(:first-child){
+    font-size:1.2em;
+    line-height: 125%;
+  }
+
+  .main-about__contact{
+    display: flex;
+    margin-top: 100px;
+    h1{
+      font-weight: bold;
+      font-size:24px;
+      margin-bottom: 20px;
+    }
+    .main-about__contact__info{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-right: 100px;
+      .main-about__contact__info__piece{
+        justify-content: space-between;
+        .main-about__contact__info__piece__logo{
+          width: 50%;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+    
+    .main-about__contact__quote{
+      p{
+        font-size:36px;
+        font-weight: bold;
+        margin-bottom: 30px;
+
+      }
+      button{
+        padding: 1em 1.5em;
+        color: #131313;
+        background-color: white;
+        font-weight: bold;
+        font-family: "Montserrat";
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
