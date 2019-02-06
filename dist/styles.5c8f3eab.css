@@ -81,9 +81,25 @@ table {
   text-decoration: none;
   font-size: 2em;
   color: #101010;
+  position: relative;
 }
 .header-home .header-home__projects {
   cursor: pointer;
+}
+.header-home a:not(.header-home__logo):before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 100%;
+  background-color: black;
+  height: 3px;
+  transition-property: right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.header-home a:hover::before {
+  right: 0;
 }
 .header-home nav {
   text-align: right;
@@ -91,21 +107,6 @@ table {
 .header-home nav a {
   margin-right: 40px;
   font-size: 1.2em;
-}
-.header-home nav a:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 100%;
-  background-color: black;
-  height: 2px;
-  transition-property: right;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
-}
-.header-home nav a:hover:before {
-  right: 0;
 }
 
 .main-home {
@@ -214,9 +215,22 @@ table {
 .menu__header nav a {
   margin-right: 40px;
   font-size: 1.2em;
+  position: relative;
 }
-.menu__header nav .menu__header__projects {
-  text-decoration: underline;
+.menu__header nav a:not(.header-home__logo):before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 100%;
+  background-color: black;
+  height: 3px;
+  transition-property: right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.menu__header nav a:hover::before {
+  right: 0;
 }
 
 @font-face {
@@ -252,22 +266,22 @@ table {
   text-decoration: none;
   font-size: 2em;
   color: white;
+  position: relative;
 }
-.header-about a:before {
+.header-about a:not(.header-about__logo):before {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: -3px;
   left: 0;
   right: 100%;
-  width: 0;
-  background-color: black;
-  height: 2px;
+  background-color: white;
+  height: 3px;
   transition-property: right;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
 .header-about a:hover:before {
-  width: 100%;
+  right: 0%;
 }
 .header-about nav {
   text-align: right;

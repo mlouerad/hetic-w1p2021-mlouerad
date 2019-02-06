@@ -42,30 +42,31 @@ $main-color:#101010;
     text-decoration: none;
     font-size: 2em;
     color: $main-color;
+    position: relative;
   }
   .header-home__projects{
     cursor: pointer;
+  }
+  a:not(.header-home__logo):before{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 100%;
+    background-color:black;
+    height: 3px;
+    transition-property: right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+  }
+  a:hover::before{
+    right: 0;
   }
   nav{
     text-align: right;
     a{
       margin-right: 40px;
       font-size: 1.2em;
-    }
-    a:before{
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 100%;
-      background-color:black;
-      height: 2px;
-      transition-property: right;
-      transition-duration: 0.3s;
-      transition-timing-function: ease-in-out;
-    }
-    a:hover:before{
-      right: 0;
     }
   }
 
@@ -183,10 +184,24 @@ $main-color:#101010;
     a{
       margin-right: 40px;
       font-size: 1.2em;
+      position: relative;
     }
-    .menu__header__projects{
-      text-decoration: underline;
+    a:not(.header-home__logo ):before{
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 100%;
+      background-color:black;
+      height: 3px;
+      transition-property: right;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
     }
+    a:hover::before{
+      right: 0;
+    }
+    
   }
 
 
